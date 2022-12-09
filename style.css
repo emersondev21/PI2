@@ -1,0 +1,200 @@
+/* importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+/* reset na página */
+*{
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+  font-family: 'Lexend Deca', sans-serif;
+  /* caret-color: #00ff88; */
+  scroll-behavior: smooth;
+}
+
+kjb
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #201b2c; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00ff88;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #77ffc0; 
+}
+
+.pre{
+  width: 80px; height: 80px;
+  background-image: url("https://ilustracode.com.br/assets/images/load.png");
+  background-position: center;
+  background-size: contain;
+  animation: load 2s infinite;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.div-main{
+  /* "vh" e "vw" usa o tamanho da tela como parâmetro */
+  width: 100vw; 
+  height: 100vh;
+  background: #201b2c;
+  display: flex; /* display flex deixa as coisas lado a lado*/
+  justify-content: center; /* "justify-content" ajusta a posição dos itens no eixo "X" */
+  align-items: center; /* "align-itens" ajusta a posição dos itens no eixo "Y" */
+}
+
+.div-left{
+  width: 50vw;
+  height: 50vh;
+  padding-left: 20px;
+  display: flex; /* display flex deixa as coisas lado a lado*/
+  justify-content: center; /* "justify-content" ajusta a posição dos itens no eixo "X" */
+  align-items: center; /* "align-itens" ajusta a posição dos itens no eixo "Y" */
+  flex-direction: column; /* defiine a direção da organização flex, nesse caso eu quero que a imagem ainda fique no centro */
+
+}
+
+.div-left > h1 {
+  font-size: 3vw;
+  color: #77ffc0;
+  padding-left: 10vw;
+}
+
+.login-img {
+  width: 35vw;
+}
+
+.div-right{
+  width: 50vw;
+  height: 50vh;
+  display: flex; /* display flex deixa as coisas lado a lado*/
+  justify-content: center; /* "justify-content" ajusta a posição dos itens no eixo "X" */
+  align-items: center; /* "align-itens" ajusta a posição dos itens no eixo "Y" */
+}
+
+.card-login{
+  /* background-color: #222f3e; */
+  width: 60%; /* "%" usa o tamanho da div que o conteúdo está como parâmetro */ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px; /* "padding" define o espaçamento entre os itens dentro da dive e a borda da div; "x" "y" */
+  background: #2f2841;
+  border-radius: 15px;
+  box-shadow: 0px 10px 40px #00000056; /* "x" "y" "blur" "cor" */
+}
+
+.card-login > h1{
+  color: #00ff88;
+  font-weight: 800;
+  margin: 0;
+}
+
+.textfield {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* quando usa o "column", os valores modificados pelo "align-itens" e pelo "justify-content", são trocados entre si */
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.textfield > input{
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  background: #514869;
+  color: #f0ffffde;
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box; /* impede o elemento de ultrapassar a borda do container */
+}
+
+.textfield > label {
+  color: #f0ffffde;;
+  margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+  color: #f0ffff94;
+}
+
+.btn-login{
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #2b134b ;
+  background-color: #00ff88;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+  
+}
+
+.btn-login:hover{
+   background-color: #77FFC0;
+}
+
+/* .usuario:focus{
+border: solid 2px#00ff88;
+} */
+
+.criar, .ncconectar{
+color:#77FFC0
+}
+
+/* media só será ativado quando a tela possuir até 950px */
+@media only screen and (max-width: 950px){
+  .card-login{
+    width: 85%;
+  }
+}
+
+/* quase a mesma coisa do anterior, mas agora, para tela de celulares */
+@media only screen and (max-width: 950px){
+  .div-main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-left > h1{
+    display: none;
+  }
+
+  .div-left{
+    width: 100%; /* ocupa a tela de celular inteira */
+    height: auto;
+  }
+
+  .div-right{
+    width: 100%; /* ocupa a tela de celular inteira */
+    height: auto;
+  }
+
+  .div-left > .login-img{
+    width: 50vw;
+  }
+
+  .card-login{
+    width: 90%;
+  }
+}
