@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
   <div class="content">
   <div class="div-main">
 
@@ -38,6 +39,11 @@
           <label for="senha">SENHA</label>
           <input id="senha" name="senha" class="senha" type="password" placeholder="*********">
           
+          <div class="custom-checkbox">
+            <input type="checkbox" id="showpassword" onclick="mostrar_senha()">
+            <label for="showpassword">Mostrar Senha</label>
+          </div>
+          
           <button class="btn-login" type="submit" onclick="valida_form()">ENTRAR</button>
           <a class="criar" href="#">Criar conta</a>
           <a class="ncconectar" href="#">Não consigo conectar</a>
@@ -46,6 +52,9 @@
       </div>
     </div>
   </div>
+</div>
+<div class="footer">
+
 </div>
 </body>
 <script type="text/javascript" src="script.js"></script>
