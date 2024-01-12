@@ -5,13 +5,10 @@
 *{
   padding: 0;
   margin: 0;
-  /* box-sizing: border-box; */
   font-family: 'Lexend Deca', sans-serif;
-  /* caret-color: #00ff88; */
   scroll-behavior: smooth;
 }
 
-kjb
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -38,7 +35,7 @@ body * {
 }
 
 .div-main{
-  /* "vh" e "vw" usa o tamanho da tela como parâmetro */
+  margin: 0;
   padding-top: 20px;
   width: 100vw; 
   height: 100vh;
@@ -59,13 +56,13 @@ body * {
 }
 
 .div-left > h1 {
-  font-size: 3vw;
+  font-size: 45px;
   color: #77ffc0;
   padding-left: 10vw;
 }
 
 .login-img {
-  width: 35vw;
+  width: 350px;
 }
 
 .div-right{
@@ -77,13 +74,12 @@ body * {
 }
 
 .card-login{
-  /* background-color: #222f3e; */
   width: 60%; /* "%" usa o tamanho da div que o conteúdo está como parâmetro */ 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 30px 35px; /* "padding" define o espaçamento entre os itens dentro da dive e a borda da div; "x" "y" */
+  padding: 30px 35px; /* "padding" define o espaçamento entre os itens dentro da div e a borda da div; "x" "y" */
   background: #2f2841;
   border-radius: 15px;
   box-shadow: 0px 10px 40px #00000056; /* "x" "y" "blur" "cor" */
